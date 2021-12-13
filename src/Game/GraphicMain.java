@@ -17,7 +17,7 @@ public class GraphicMain extends Application {
         primaryStage.setTitle("Brick Destroyer");
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.getIcons().add(new Image("brick.png"));
+        //primaryStage.getIcons().add(new Image("brick.png"));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

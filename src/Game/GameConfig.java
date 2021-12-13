@@ -163,7 +163,6 @@ public class GameConfig {
     int totalBrokenBricks;
     boolean ShowWall;
     boolean EndOfGameMenu;
-    protected Wall bricks;
 
     protected int rowsInBrickField=3;
     SecureRandom random = new SecureRandom();
@@ -180,7 +179,7 @@ public class GameConfig {
         isPaused=true;
         BallInitialization();
         PaddleInitialization();
-        bricks = new Wall(pane, rowsInBrickField,level);
+         Wall bricks = new Wall(pane, rowsInBrickField,level);
         BrickInitialization(bricks);
         ShowPauseMenu(false);
         ShowDebugMenu(false);
@@ -321,19 +320,15 @@ public class GameConfig {
                     }
                 }
                 if(levelComplete){
-                    /*if(level>=0&&level<4){
+                    if(level>=0&&level<5){
                         level++;
                         ResetPaddleSize();
                         initialize();
                     }
-                     */
+                }
+                if(level==1 && levelComplete){
                     GameEndScreen();
                 }
-                /*if(level==1 && levelComplete){
-                    GameEndScreen();
-                }
-
-                 */
             }
 
             /**
